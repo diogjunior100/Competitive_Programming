@@ -30,7 +30,10 @@
 *.exe
 *.out
 *.app
+*prog
 
 #DS_Store
-.DS_Store
+*.DS_Store
+
+#vscode
 .vscode/
