@@ -16,21 +16,37 @@ int main()
     int n;
     cin >> n;
 
-    vector<int> a(n+1), b(n+1), c(n+1);
+    vector<ll> a, b, c, vtr(n+1);
+    int temp;
 
     for (int i = 0; i < n; i++){
-        cin >> a[i];
-    }
-    for (int i = 0; i < n; i++){
-        cin >> b[i];
-    }
-    for (int i = 0; i < n; i++){
-        cin >> c[i];
+        cin >> temp;
+        temp = temp - 1;
+        a.push_back(temp);
     }
 
     for (int i = 0; i < n; i++){
-    	
+        cin >> temp;
+        temp = temp - 1;
+        b.push_back(temp);
     }
+
+    for (int i = 0; i < n; i++){
+        cin >> temp;
+        temp = temp - 1;
+        c.push_back(temp);
+    }
+
+    for (int i = 0; i < n; ++i){
+    	vtr[b[c[i]]] += 1; 
+    }
+
+    ll pairs = 0;
+    for (int i = 0; i < n; ++i){
+    	pairs += vtr[a[i]];
+    }
+
+    cout << pairs << endl;
     
 
     return 0;
