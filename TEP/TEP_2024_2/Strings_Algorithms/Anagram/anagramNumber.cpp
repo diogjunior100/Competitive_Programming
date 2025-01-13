@@ -13,17 +13,17 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    istringstream is("123.456.789-10");
-    string token;
+    string s = {"banana"};
+    int number = 0;
 
-    getline(is, token, '.');
-    cout << token << endl; 
+    sort(s.begin(), s.end());
 
-    getline(is, token, '.');
-    cout << token << endl;
-
-    getline(is, token, '-');
-    cout << token << endl;
+    do
+    {
+        cout << ++number << " " << s.c_str() << endl;
+    } while (next_permutation(s.begin(), s.end()));
+    
+    cout << number << endl;
 
     return 0;
 }
