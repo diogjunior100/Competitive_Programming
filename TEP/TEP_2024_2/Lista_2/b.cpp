@@ -7,27 +7,22 @@ using pll = pair<ll, ll>;
 const ll oo = {1000000000000000010LL};
 const ll MAX = {200010};
 
-bool is_anagram (string s, string t) {
-    //string a(s), b(t);
-
-    sort(s.begin(), s.end());
-    sort(t.begin(), t.end());
-
-    return s == t;
-}
-
-void solve (vector<string> vtr) {
-    int sum = 0;
-    for (int i = 0; i < vtr.size(); i++){
-        for (int j = i + 1; j < vtr.size(); j++){
-            if (is_anagram(vtr[i], vtr[j]) == true ) {
+void solve (vector<string> vtr, ll n) {
+    ll sum = 0;
+    for (ll i = 0; i < n; i++)
+    {
+        sort(vtr[i].begin(), vtr[i].end());
+        do
+        {
+            cout << vtr[i].c_str();
+            if(vtr[i].c_str() == vtr[i+1]){
                 sum++;
             }
-        }        
+        } while (next_permutation(vtr[i].begin(), vtr[i].end()));
+        cout << vtr[i].c_str();
     }
     
     cout << sum << endl;
-    
 }
 
 int main()
@@ -48,7 +43,7 @@ int main()
         n--;
     }
 
-    solve(vtr);
+    solve(vtr, n);
     
 
     return 0;
