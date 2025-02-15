@@ -13,5 +13,30 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
+    string s;
+    cin >> s;
+
+    string temp = s;
+
+    while (s != "#")
+    {
+        sort(s.begin(), s.end());
+        int number = 0;
+
+        do{
+            ++number;
+            if (s.c_str() == temp){
+                break;
+            }
+            
+        } while (next_permutation(s.begin(), s.end()));
+    
+        //cout << number << endl;
+
+        cin >> s;
+        temp = s;
+    }
+    
+
     return 0;
 }
