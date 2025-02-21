@@ -31,6 +31,8 @@
 *.out
 *.app
 *prog
+*in
+*saida
 
 # DS_Store
 *.DS_Store
