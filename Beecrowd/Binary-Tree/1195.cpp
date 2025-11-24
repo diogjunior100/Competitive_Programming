@@ -86,7 +86,7 @@ int main()
         tree.preorder(tree.root);
         cout << "\n";
 
-        cout << "In.:";
+        cout << "In..:";
         tree.inorder(tree.root);
         cout << "\n";
 
